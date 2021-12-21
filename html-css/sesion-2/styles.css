@@ -1,0 +1,26 @@
+label{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 1em 0 0 1em;
+}
+
+.form-submit{
+    background-color: black;
+    color: white;
+    margin: 1em 0 0 1em;
+    padding: .5em;
+    width: 20%;
+    border: none;
+    border-radius: .5em;
+}
+
+table, tr, td, th{
+    text-align: center;
+    border: 2px solid black;
+}
+
+table{
+    margin-top: 100px;
+    padding: 1em;
+}

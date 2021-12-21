@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario y tablas</title>
+</head>
+<body>
+    <form action="url-sevidor">
+        <label for="name">
+            Indica tú nombre:
+            <input type="text" name="name" id="name">
+        </label>
+        <label for="lastName">
+            Indica tú apellido:
+            <input type="text" name="lastName" id="lastName">
+        </label>
+        <label for="email">
+            Indica tú email:
+            <input type="text" name="email" id="email">
+        </label>
+        <label for="phone">
+            Indica tú número de teléfono:
+            <input type="tel" name="phone" id="phone">
+        </label>
+        <label for="address">
+            Indica tú dirección:
+            <input type="text" name="address=" id="address">
+        </label>
+        <input type="submit" value="Enviar formulario" class="form-submit">
+    </form>
+    <table>
+        <caption></caption>
+        <tr>
+            <th>Datos 1</th>
+            <td>celda 1</td>
+            <td>celda 2</td>
+            <td colspan="2">3</td>
+        </tr>
+        <tr>
+            <th>Datos 2</th>
+            <td>celda 3</td>
+            <td>celda 4</td>
+            <td>celda 5</td>
+            <td>celda 6</td>
+        </tr>
+        <tr>
+            <th>Datos 3</th>
+            <td>Celda 6</td>
+            <td>Celda 7</td>
+            <td>Celda 8</td>
+            <td rowspan="2">Celda 9</td>
+        </tr>
+        <tr>
+            <th>Datos 4</th>
+            <td>Celda 10</td>
+            <td>Celda 11</td>
+            <td>Celda 12</td>
+        </tr>
+    </table>
+</body>
+</html>
