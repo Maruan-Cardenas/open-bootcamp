@@ -1,11 +1,12 @@
 import './App.css';
-import TaskListComponent from './component/container/task_list';
+import ContactComponent from './component/componentA/componentA';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <TaskListComponent />
+        <ContactComponent/>
       </header>
     </div>
   );
