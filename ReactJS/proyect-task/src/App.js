@@ -1,11 +1,14 @@
 import './App.css';
-import TaskListComponent from './component/container/task_list';
+import Example1 from './hooks/example1';
+import Example2 from './hooks/example2';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <TaskListComponent />
+      <Example1 />
+      <Example2 />
       </header>
     </div>
   );
