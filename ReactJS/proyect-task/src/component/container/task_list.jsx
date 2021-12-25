@@ -28,7 +28,7 @@ const TaskListComponent = () => {
            <div>
               <h1>Tús Tareas:</h1>
            </div> 
-           <TaskComponent task={tasks}/>
+           <TaskComponent task={defaultTask}/>
         </div>
     )
 }

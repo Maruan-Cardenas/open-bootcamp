@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import '../../styles/task.scss'
 import PropTypes from 'prop-types'
 import { Task } from '../../models/task.class'
 
@@ -13,7 +14,7 @@ const TaskComponent = ({ task }) => {
 
     return (
         <div>
-            <h2>Nombre: { task.name }</h2>
+            <h2 className="task-name">Nombre: { task.name }</h2>
             <h3>Descripción: { task.description }</h3>
             <h4>Nivel: { task.level }</h4>
             <h5>Esta tarea está: { task.completed ? 'Completada' : 'Pendiente' }</h5>
