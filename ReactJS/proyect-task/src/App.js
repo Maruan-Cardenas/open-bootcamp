@@ -1,4 +1,5 @@
 import './App.css';
+import GreetingStyled from './component/pure/greetiingStyled';
 import Example1 from './hooks/example1';
 import Example2 from './hooks/example2';
 import MiComponenteConContexto from './hooks/example3';
@@ -16,6 +17,7 @@ function App() {
         {/* Todo lo que hay quí, es tratado como props.children en cualquier componente*/}
         Contenido del props.children
       </Example4>
+      <GreetingStyled name='Maruan' />
       </header>
     </div>
   );
