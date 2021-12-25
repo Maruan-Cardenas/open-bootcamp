@@ -1,12 +1,14 @@
 import './App.css';
-import ContactComponent from './component/componentA/componentA';
+import Clockjsx from './component/Clock';
+import Clockjs from './component/Clockjs';
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <ContactComponent/>
+        <Clockjs />
+        <Clockjsx />
       </header>
     </div>
   );
