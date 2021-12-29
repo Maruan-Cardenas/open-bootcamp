@@ -1,4 +1,5 @@
 import './App.css';
+import Father from './component/container/father';
 import GreetingStyled from './component/pure/greetiingStyled';
 import Example1 from './hooks/example1';
 import Example2 from './hooks/example2';
@@ -18,6 +19,7 @@ function App() {
         Contenido del props.children
       </Example4>
       <GreetingStyled name='Maruan' />
+      <Father />
       </header>
     </div>
   );

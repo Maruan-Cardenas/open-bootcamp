@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'boostrap/dist/css/bootstrap.css'
-// ! Importante: los estilos propios, deben ir debajo del bootstrap para que no los pise
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
