@@ -1,10 +1,12 @@
 import './App.css';
-import TaskListComponent from './component/container/task_list';
+import Constats from './component/container/contacts';
+// import TaskListComponent from './component/container/task_list';
 
 function App() {
   return (
     <div className="App">
-      <TaskListComponent />
+      {/* <TaskListComponent /> */}
+      <Constats />
     </div>
   );
 }
