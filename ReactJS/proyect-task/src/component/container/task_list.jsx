@@ -17,7 +17,7 @@ const TaskListComponent = () => {
    ])
    const [loading, setLoading] = useState(true)
 
-   // Control del ciclo de vida del componentes
+   // Control del ciclo de vida del componente
    useEffect(() => {
       console.log('Task State has been modifie')
       setLoading(false)
@@ -26,9 +26,30 @@ const TaskListComponent = () => {
       }
    }, [tasks])
 
-   const changeCompleted = (id) => {
-    console.log("Cambiar estado de una tarea")
+   function completeTask(task) {
+      console.log('Complete this task:', task)
+      const index = tasks.indexOf(task)
+      const tempTasks = [...tasks]
+      tempTasks[index].completed = !tempTasks[index].completed
+      // We update the state of the componenet with the new list of tasks and it will updaate the Iteration of the tasks in order to show the task updated
+      setTasks(tempTasks)
    }
+
+   function deleteTask(task) {
+      console.log(task, 'is going to remove')
+      const index = tasks.indexOf(task)
+      const tempTasks = [...tasks]
+      tempTasks.splice(index, 1)
+      setTasks(tempTasks)
+   }
+
+   function addTask(task) {
+   console.log(task, 'is added')
+   const tempTasks = [...tasks]
+   tempTasks.push(task)
+   setTasks(tempTasks)
+   }
+
 
     return (
         <div>
@@ -53,16 +74,21 @@ const TaskListComponent = () => {
                            {/* ToDo: Iterar sobre una lista de tareas */}
                            {
                               tasks.map((res, index) => {
-                                 return <TaskComponent key={index} task={res}/>
+                                 return <TaskComponent 
+                                          key={index} 
+                                          task={res} 
+                                          complete={completeTask}
+                                          remove={deleteTask}
+                                          />
                                  
                            })
                            }
                         </tbody>
                      </table>
                   </div>
-                  <Taskform />
               </div>
            </div> 
+                  <Taskform add={addTask} />
         </div>
     )
 }
