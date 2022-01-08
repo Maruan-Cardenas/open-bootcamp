@@ -1,6 +1,7 @@
 import './App.css';
 import Father from './component/container/father';
 import GreetingStyled from './component/pure/greetiingStyled';
+import OptionalRender from './component/pure/optionalRender';
 import Example1 from './hooks/example1';
 import Example2 from './hooks/example2';
 import MiComponenteConContexto from './hooks/example3';
@@ -20,6 +21,7 @@ function App() {
       </Example4>
       <GreetingStyled name='Maruan' />
       <Father />
+      <OptionalRender />
       </header>
     </div>
   );
