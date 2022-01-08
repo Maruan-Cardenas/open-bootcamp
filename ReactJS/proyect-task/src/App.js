@@ -1,10 +1,10 @@
 import './App.css';
-import TaskListComponent from './component/container/task_list';
+import ColorSwitch from './component/pure/colorSwitch';
 
 function App() {
   return (
     <div className="App">
-      <TaskListComponent />
+      <ColorSwitch />
     </div>
   );
 }
