@@ -1,5 +1,6 @@
 import './App.css';
 import Father from './component/container/father';
+import LoginFormik from './component/pure/form/loginFormik';
 import GreetingStyled from './component/pure/greetiingStyled';
 import OptionalRender from './component/pure/optionalRender';
 import Example1 from './hooks/example1';
@@ -22,6 +23,7 @@ function App() {
       <GreetingStyled name='Maruan' />
       <Father />
       <OptionalRender />
+      <LoginFormik />
       </header>
     </div>
   );
