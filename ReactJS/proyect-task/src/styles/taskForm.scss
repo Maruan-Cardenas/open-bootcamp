@@ -1,0 +1,24 @@
+.level-normal, .level-urgent, .level-blocking {
+  width: 100px;
+}
+
+.level-container{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.level-normal{
+  background-color: rgb(12, 117, 238);
+  font-weight: bold;
+}
+
+.level-urgent{
+  background-color: rgb(250, 212, 0);
+  font-weight: bold;
+}
+
+.level-blocking{
+  background-color: rgb(238, 12, 12);
+  font-weight: bold;
+}

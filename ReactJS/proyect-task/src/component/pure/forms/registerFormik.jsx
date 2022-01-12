@@ -49,8 +49,8 @@ const RegisterFormik = () => {
 
 
   return (
-    <div>
-      <h4>Register Formik</h4>
+    <div style={{marginTop: '2em'}}>
+      <h4 style={{color: 'white'}}>Register Formik</h4>
       <Formik
       initialValues={initialValues}
       validationSchema={registerSchema}
