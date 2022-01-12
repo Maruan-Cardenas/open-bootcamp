@@ -50,7 +50,7 @@ const Taskform = ({ add, length }) => {
       >
         {({value, touched, errors, isSubmitting, handleChange, handleBlur }) => (
           <Form style={{color: 'white', display: 'flex', flexDirection: 'column'}}>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>Name of the Task</label>
             <Field id='name' type='text' name='name' placeholder='Name of the task' />
             {
               errors.name && touched.name && <ErrorMessage name='name' component='div' />

@@ -68,7 +68,7 @@ const RegisterFormik = () => {
             }
             <label htmlFor='email'>Email</label>
             <Field id='email' type='email' name='email' placeholder='example@email.com' />
-            {
+            {  
               errors.email && touched.email && <ErrorMessage name='email' component='div' />
             }
             <label htmlFor='password'>Password</label>
