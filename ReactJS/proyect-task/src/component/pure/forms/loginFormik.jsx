@@ -14,10 +14,18 @@ const loginSchema = Yup.object().shape({
 
 const LoginFormik = () => {
   const navigate = useNavigate()
+  const navigation = (paht) => {
+    navigate(paht)
+  }
   
   const initialCredentials = {
     email: '',
     password: ''
+  }
+
+    const formContainer = {
+    display: 'flex',
+    flexDirection: 'column',
   }
 
   return (
@@ -44,7 +52,7 @@ const LoginFormik = () => {
           isSubmitting,
           handleChange,
           handleBlur}) => (
-            <Form>
+            <Form style={formContainer}>
               <label htmlFor="email">Email</label>
               <Field 
                 id="email" 
@@ -71,6 +79,7 @@ const LoginFormik = () => {
                 {
                   isSubmitting && <p>Login your credentials...</p>  
                 }
+                <button onClick={() => navigation('/register')}>Register</button>
             </Form>
         )
       }

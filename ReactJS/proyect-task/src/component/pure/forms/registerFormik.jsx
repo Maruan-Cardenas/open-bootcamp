@@ -3,8 +3,14 @@ import { User } from '../../../models/user.class.js'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import { ROLES } from '../../../models/roles.enum.js';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterFormik = () => {
+  const navigate = useNavigate()
+  const navigation = (paht) => {
+    navigate(paht)
+  }
+  
   let user = new User()
 
   const initialValues = {
@@ -42,7 +48,6 @@ const RegisterFormik = () => {
   )
 
   const formContainers = {
-    color:'white',
     display: 'flex',
     flexDirection: 'column',
   }
@@ -50,7 +55,7 @@ const RegisterFormik = () => {
 
   return (
     <div style={{marginTop: '2em'}}>
-      <h4 style={{color: 'white'}}>Register Formik</h4>
+      <h4>Register Formik</h4>
       <Formik
       initialValues={initialValues}
       validationSchema={registerSchema}
@@ -85,6 +90,7 @@ const RegisterFormik = () => {
             {
               isSubmitting && <p>Sending your credentials...</p> 
             }
+            <button onClick={() => navigation('/login')}>Login</button>
           </Form>
         )}
         

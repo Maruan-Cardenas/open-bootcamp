@@ -3,13 +3,15 @@ import './App.css';
 // Component import
 import NotFoundPages from './pages/404/NotFoundPages';
 import LoginPage from './pages/login/LoginPage'
+import RegisterPage from './pages/register/RegisterPage'
 import DashBoard from './pages/dashboard/DashBoard'
+import TaskPage from './pages/tasks/TaskPage'
 
 // Routes import
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
-  let loggedIn = true
+  let loggedIn = false
   return (
     <>
       {/*Switch de rutas  */}
@@ -23,13 +25,10 @@ function App() {
               : <Navigate from='/' to="/login" />
           }/>
         {/* Login route */}
-        <Route 
-          path="/login" 
-          element={
-            loggedIn 
-              ? <Navigate from='/' to="/dashboard" /> 
-              : <LoginPage />
-          }/>
+        <Route path="/login" element={<LoginPage />}/>
+        
+        {/* Register route */}
+        <Route path="/register" element={<RegisterPage />}/>
 
         {/* DashBoard Route */}
         <Route 
@@ -37,6 +36,14 @@ function App() {
           element={
             loggedIn 
               ? <DashBoard/> 
+              : <Navigate from='/' to="/login" />
+          }/>
+
+          <Route 
+          path="/task" 
+          element={
+            loggedIn 
+              ? <TaskPage /> 
               : <Navigate from='/' to="/login" />
           }/>
 
