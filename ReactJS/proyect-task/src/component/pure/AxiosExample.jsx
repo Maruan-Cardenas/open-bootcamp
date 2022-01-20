@@ -3,36 +3,43 @@ import { getRamdomUser } from '../../services/axiosService';
 
 const Axiosexample = () => {
   const [user, setUser] = useState({})
+  const [like, setLike] = useState(0)
+  const [dislike, setDislike] = useState(0)
 
   const getGererateRamdomUser = () => {
     getRamdomUser()
       .then( res => {
-        setUser(res.data.results)
+        setUser(res.data)
         console.log(user)
       })
       .catch(err => {
         console.log(err)
       })
   }
+  const handleLikes = () => {
+    setLike(like + 1)
+  }
+  const handleDislike = () => {
+    setDislike(dislike + 1)
+  }
 
   return (
     <div>
-      <h1>Axios Example</h1>
-      <h2>
-        {
-          user &&
-            (
+      <h1>Chucknorris Joke</h1>
+        <div>
+          <h3>{user.value}</h3>
+        </div>
+        <div>
+          <button onClick={getGererateRamdomUser}>New Ramdom joke</button>
+          {
+            user.value && (
               <div>
-                <img src={user.picture} alt="user" />
-                <h2>{user.title} {user.name} {user.name}</h2>
-                <h3>{user.email}</h3>
+              <button onClick={handleLikes}>Like {like}</button>
+              <button onClick={handleDislike}>Dislike {dislike}</button>
               </div>
             )
-        }
-      </h2>
-        <div>
-          <p>Generate new user</p>
-          <button onClick={getGererateRamdomUser}>Ramdom User</button>
+          }
+          
         </div>
     </div>
   );
