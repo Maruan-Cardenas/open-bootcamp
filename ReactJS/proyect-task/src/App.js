@@ -5,7 +5,7 @@ import Axiosexample from './component/pure/AxiosExample';
 import Fetchexample from './component/pure/FetchExample';
 import LoginFormik from './component/pure/form/loginFormik';
 import GreetingStyled from './component/pure/greetiingStyled';
-import ObservableExample from './component/pure/ObservableExample';
+// import ObservableExample from './component/pure/ObservableExample';
 import OptionalRender from './component/pure/optionalRender';
 import Example1 from './hooks/example1';
 import Example2 from './hooks/example2';

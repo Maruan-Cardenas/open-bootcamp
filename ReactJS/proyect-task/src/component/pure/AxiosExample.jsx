@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { getRamdomUser } from '../../services/axiosService';
+import Button from '@mui/material/Button';
 
 const Axiosexample = () => {
   const [user, setUser] = useState({})
@@ -30,12 +31,12 @@ const Axiosexample = () => {
           <h3>{user.value}</h3>
         </div>
         <div>
-          <button onClick={getGererateRamdomUser}>New Ramdom joke</button>
+          <Button variant="contained" onClick={getGererateRamdomUser}>New Ramdom joke</Button>
           {
             user.value && (
               <div>
-              <button onClick={handleLikes}>Like {like}</button>
-              <button onClick={handleDislike}>Dislike {dislike}</button>
+              <Button variant="contained" onClick={handleLikes}>Like {like}</Button>
+              <Button variant="contained" onClick={handleDislike}>Dislike {dislike}</Button>
               </div>
             )
           }

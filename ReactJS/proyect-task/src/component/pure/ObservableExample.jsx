@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { getNumber } from '../../services/observableService';
 
+
 const ObservableExample = () => {
   const [number, setNumber] = useState(0)
 
