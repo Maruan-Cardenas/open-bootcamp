@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import AppRoutingOne from './AppRoutingOne';
-import { BrowserRouter } from 'react-router-dom'
+//import config function fo App Store
+import { createAppStore } from './store/config/storeConfing'
+// Redux imports
+import { Provider } from 'react-redux'
+// We create the App Store
+let appStore = createAppStore()
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <BrowserRouter>
-     {/* <AppRoutingOne /> */}
-    </BrowserRouter>
-  </React.StrictMode>,
+  <Provider store={appStore}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
