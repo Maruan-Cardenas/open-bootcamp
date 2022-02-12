@@ -1,11 +1,10 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { addTodo } from '../../store/actions/actions';
 import TodoForm from '../pure/TodoForm';
 
- const mapStateToProps = (state) => {
-   // Not necessary
- }
+const mapStateToProps = () => {
+  // Not Necessary
+}
 
  const mapDispatchToProps = (dispatch) => {
   return {

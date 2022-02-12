@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types';
 import FilterContainer from '../container/FilterContainer';
 
 const FilterOption = () => {
@@ -17,12 +16,6 @@ const FilterOption = () => {
       </FilterContainer>
     </div>
   );
-}
-
-FilterOption.propTypes = {
-  active: PropTypes.bool.isRequired,
-  onClick:  PropTypes.func.isRequired,
-  children: PropTypes.node.isRequired
 }
 
 export default FilterOption;

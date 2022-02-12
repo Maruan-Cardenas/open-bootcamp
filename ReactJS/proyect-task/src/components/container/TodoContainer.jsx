@@ -12,9 +12,9 @@ const filterTodos = (todos, filter) => {
     case 'SHOW_ACTIVLE':
       return todos.filter(todos => !todos.completed)
     case 'SHOW_COMPLETED':
-     return todos.filter(todos => todos.completed)
+      return todos.filter(todos => todos.completed)
    default:
-     return todos
+      return todos
   }
 }
 
