@@ -3,19 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import config function fo App Store
-import { createAppStore } from './store/config/storeConfing'
-// Redux imports
-import { Provider } from 'react-redux'
-// We create the App Store
-let appStore = createAppStore()
 
 ReactDOM.render(
-  <Provider store={appStore}>
     <React.StrictMode>
       <App />
-    </React.StrictMode>
-  </Provider>,
+    </React.StrictMode>,
   document.getElementById('root')
 );
 

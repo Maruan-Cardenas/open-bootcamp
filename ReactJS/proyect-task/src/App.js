@@ -1,13 +1,14 @@
-import TodosContainer from "./components/container/TodoContainer";
-import TodoFormContainer from "./components/container/TodoFormContainer";
-import FilterOption from "./components/pure/FilterOption";
+import Counter from "./components/Counter.jsx";
 
 function App() {
   return (
     <div className="App">
-      <TodosContainer />
-      <TodoFormContainer />
-      <FilterOption />
+      <header className="App-header">
+        <h1>
+          useReducer Examples
+          <Counter />
+        </h1>
+      </header>
     </div>
   );
 }
